@@ -1,7 +1,7 @@
 # SoundOfSalience
-# MATLAB code for analyses of iEEG data
+% MATLAB code for analyses of iEEG data
 
-# iEEG input data format
+% iEEG input data format
 
 
 
@@ -11,7 +11,7 @@
 
 # Computing Cerebro-Acoustic_Coherence
 
-# Input Waveform processing
+% Input Waveform processing
 
 
 
