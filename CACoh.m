@@ -43,10 +43,10 @@ for ch=1:length(data.label)
     for tr = 1:length(data.trial)
         % compute coherence in the baseline
         xb = data.trial{tr}(ch,t_prestim:t_prestim+data.fsample*dur-1);
-        [cohb, ~] =  mscohere(xb, stim, [], [], [1 fmod],data.fsample);
+        [cohb, ~] =  mscohere(xb, stim, 300, 250, [1 fmod],data.fsample);
         % compute coherence in the poststim
         x = data.trial{tr}(ch,t_poststim:t_poststim+data.fsample*dur-1);
-        [coha, ~] =  mscohere(x, stim, [], [], [1 fmod],data.fsample);
+        [coha, ~] =  mscohere(x, stim, 300, 250, [1 fmod],data.fsample);
         coherence(tr) = coha(1,2)-cohb(1,2); % poststim minus prestim coherence
     end
     % store statistics (t and p values)
